@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Add from "@material-ui/icons/Add";
+import Fab from "@material-ui/core/Fab";
 
 export default function CreateArea(props) {
   const [input, setInput] = useState({
@@ -39,7 +41,9 @@ export default function CreateArea(props) {
           placeholder="Take a note..."
           rows="3"
         />
-        <button>Add</button>
+        <Fab aria-label="add">
+          <Add />
+        </Fab>
       </form>
     </div>
   );
