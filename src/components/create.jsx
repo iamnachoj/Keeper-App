@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Add from "@material-ui/icons/Add";
 import Fab from "@material-ui/core/Fab";
+import Zoom from "@material-ui/core/Zoom";
 
 export default function CreateArea(props) {
   const [input, setInput] = useState({
     title: "",
     note: ""
   });
+  const [isTyping, setIsTyping] = useState(false);
 
   function handleChange(event) {
     let { value, name } = event.target;
@@ -23,27 +25,34 @@ export default function CreateArea(props) {
       title: "",
       content: ""
     });
+    setIsTyping(false);
   }
 
   return (
     <div>
       <form className="create-note" onSubmit={handleClick}>
         <input
+          hidden={isTyping ? false : true}
           onChange={handleChange}
           value={input.title}
           name="title"
           placeholder="Title"
         />
         <textarea
+          onClick={() => {
+            setIsTyping(true);
+          }}
           onChange={handleChange}
           value={input.content}
           name="content"
           placeholder="Take a note..."
-          rows="3"
+          rows={isTyping ? "3" : "1"}
         />
-        <Fab aria-label="add">
-          <Add />
-        </Fab>
+        <Zoom in={isTyping ? true : false}>
+          <Fab type="submit">
+            <Add />
+          </Fab>
+        </Zoom>
       </form>
     </div>
   );
