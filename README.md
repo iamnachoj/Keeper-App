@@ -13,6 +13,7 @@ Built out of several React components, the app runs fast, asynchronous and very 
 - Parcel
 - axios
 - Material Design (Google UI)
+- https://www.transparenttextures.com/ for the background
 
 ## Deployment (how to get the project running?)
 
