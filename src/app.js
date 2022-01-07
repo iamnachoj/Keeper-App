@@ -9,8 +9,15 @@ const App = () => {
   const [notes, setNotes] = useState(DATA);
 
   function addItem(input) {
-    console.log(input);
     return setNotes([...notes, input]);
+  }
+
+  function removeItem(id) {
+    setNotes(
+      notes.filter((note, index) => {
+        return index !== id;
+      })
+    );
   }
 
   return (
@@ -18,7 +25,15 @@ const App = () => {
       <Header />
       <CreateArea add={addItem} />
       {notes.map((note, key) => {
-        return <Note key={key} title={note.title} content={note.content} />;
+        return (
+          <Note
+            delete={removeItem}
+            key={key}
+            id={key}
+            title={note.title}
+            content={note.content}
+          />
+        );
       })}
       <Footer />
     </div>
