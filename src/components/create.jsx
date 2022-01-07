@@ -8,17 +8,10 @@ export default function CreateArea(props) {
 
   function handleChange(event) {
     let { value, name } = event.target;
-    if ("title" === name) {
-      setInput({
-        title: value,
-        content: input.content
-      });
-    } else {
-      setInput({
-        title: input.title,
-        content: value
-      });
-    }
+    setInput({
+      ...input,
+      [name]: value
+    });
   }
 
   function handleClick(event) {
@@ -32,7 +25,7 @@ export default function CreateArea(props) {
 
   return (
     <div>
-      <form onSubmit={handleClick}>
+      <form className="create-note" onSubmit={handleClick}>
         <input
           onChange={handleChange}
           value={input.title}
