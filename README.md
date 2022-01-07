@@ -12,6 +12,7 @@ Built out of several React components, the app runs fast, asynchronous and very 
 - React-redux
 - Parcel
 - axios
+- Material Design (Google UI)
 
 ## Deployment (how to get the project running?)
 
