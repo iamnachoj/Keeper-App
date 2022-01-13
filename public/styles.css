@@ -104,6 +104,7 @@ form.create-note button {
 @media (max-height: 680px), screen and (orientation: portrait) {
   .note {
     width: 90%;
+    margin-left: 30px;
   }
   .create-note {
     width: 70%;
