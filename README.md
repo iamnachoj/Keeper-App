@@ -2,7 +2,7 @@
 
 Created with CodeSandbox
 
-Client-side block for Keeper, a Single Page Appication (SPA) for saving notes, just like any NotePad.
+Client-side block for Keeper, a Single Page Application (SPA) for saving notes, just like any NotePad.
 
 Built out of several React components, the app runs fast, asynchronous and very fluid.
 
