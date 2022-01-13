@@ -17,7 +17,6 @@ export default function CreateArea(props) {
       [name]: value
     });
   }
-
   function handleClick(event) {
     event.preventDefault();
     props.add(input);
@@ -39,11 +38,8 @@ export default function CreateArea(props) {
           placeholder="Title"
         />
         <textarea
-          onFocus={() => {
+          onClick={() => {
             setIsTyping(true);
-          }}
-          onBlur={() => {
-            setIsTyping(false);
           }}
           onChange={handleChange}
           value={input.content}
