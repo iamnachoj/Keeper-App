@@ -101,7 +101,7 @@ form.create-note button {
   cursor: pointer;
   outline: none;
 }
-/* @media (max-height: 700px), screen and (orientation: portrait) {
+@media (max-height: 700px), screen and (orientation: portrait) {
   .note {
     width: 90%;
   }
@@ -111,4 +111,4 @@ form.create-note button {
   footer {
     position: static;
   }
-} */
+}
